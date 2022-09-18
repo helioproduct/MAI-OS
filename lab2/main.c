@@ -1,5 +1,3 @@
-// Вариант 7
-
 #include <stdio.h>
 #include "unistd.h"
 
@@ -18,22 +16,16 @@ int main()
     }
 
     int id = fork();
-
     if (id == -1) {
         perror("fork error");
         return -2;
     }
-    
     if (id == 0) {
         printf("%s\n", "child");
         printf("pid = %d\n", getpid());
         calclulate_sum();
     }
     else {
-
-        // open file to read
-        
-
         printf("%s\n", "parent");
         printf("%d\n", getpid());
     }

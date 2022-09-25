@@ -20,7 +20,7 @@ int main()
         perror("fork error");
         return -2;
     }
-    if (id == 0) {
+    else if (id == 0) {
         printf("%s\n", "child");
         printf("pid = %d\n", getpid());
         calclulate_sum();
